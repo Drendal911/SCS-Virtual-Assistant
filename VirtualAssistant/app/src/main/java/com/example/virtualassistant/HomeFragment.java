@@ -63,21 +63,6 @@ public class HomeFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         checkNull();
-
-        /*
-        //TEST CODE: Insert test reminders into the database. Reminders with year/days lower, equal,
-        //TEST CODE: and higher than the current year are used to test each of the possible outcomes
-        dbReminder.insertReminder(new Reminder(1,1,1, "2019 360"));
-        dbReminder.insertReminder(new Reminder(1,2,2, "2019 350"));
-        dbReminder.insertReminder(new Reminder(1,3,3, "2019 340"));
-        dbReminder.insertReminder(new Reminder(1,4,4, "2020 360"));
-        dbReminder.insertReminder(new Reminder(1,5,5, "2020 350"));
-        dbReminder.insertReminder(new Reminder(1,6,6, "2020 340"));
-        dbReminder.insertReminder(new Reminder(1,7,7, "2021 360"));
-        dbReminder.insertReminder(new Reminder(1,8,8, "2021 350"));
-        dbReminder.insertReminder(new Reminder(1,9,9, "2021 340"));
-        */
-
         deleteOldReminders();
     }
 
