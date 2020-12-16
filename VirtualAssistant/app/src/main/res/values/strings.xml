@@ -1,0 +1,53 @@
+<resources>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">VirtualAssistant</string>
+    <string name="welcome_message">Welcome to SCS Virtual Assistant</string>
+    <string name="scs_logo_color_desc">Shelby County Schools color logo</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="email">Email Address</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="back">Back</string>
+    <string name="home">Home</string>
+    <string name="add">Add</string>
+    <string name="spinnerPrompt">Select Teacher</string>
+    <string name="cancel">Cancel</string>
+    <string name="search">Search</string>
+    <string name="dueToday">Due Today:</string>
+    <string name="notes">Notes</string>
+    <string name="none">None</string>
+    <string name="done">Done</string>
+    <string name="save">Save</string>
+    <string name="nothing">Nothing</string>
+    <string name="searchDB">Search Database</string>
+    <string name="currentlyTeaching">Currently Teaching</string>
+
+
+    <string name="className">Class Name</string>
+    <string name="addClass">ADD A CLASS</string>
+    <string name="classStartTime">Class Start Time</string>
+    <string name="selectClass">What class is this assignment for?</string>
+    <string name="classDetails">Class Details</string>
+    <string name="editClass">Edit Class</string>
+
+
+    <string name="assignment">Assignments</string>
+    <string name="incAssignment">Incomplete Assignments</string>
+    <string name="assignmentName">Assignment Name</string>
+    <string name="assignmentDueDate">Assignment Due Date</string>
+    <string name="assignmentDueTime">Assignment Due Time</string>
+    <string name="addAssignment">ADD AN ASSIGNMENT</string>
+    <string name="assignmentDetails">Assignment Details</string>
+    <string name="editAssignment">Edit Assignment</string>
+    <string name="asgmtPercent">Assignment Completion Percentage</string>
+
+
+    <string name="teacherName">Teacher Name</string>
+    <string name="addTeacher">ADD A TEACHER</string>
+    <string name="teacher">Teachers</string>
+    <string name="teacherEmail">Teacher Email</string>
+    <string name="teacherDetails">Teacher Details</string>
+    <string name="editTeacher">Edit Teacher</string>
+
+</resources>

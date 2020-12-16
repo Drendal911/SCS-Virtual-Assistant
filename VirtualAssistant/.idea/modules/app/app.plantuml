@@ -1,0 +1,326 @@
+@startuml
+
+title __VIRTUALASSISTANT.APP's Class Diagram__\n
+
+  namespace DAO {
+    interface DAO.AssignmentDAO {
+    }
+  }
+  
+
+  namespace DAO {
+    class DAO.AssignmentDAO_Impl {
+    }
+  }
+  
+
+  namespace DAO {
+    interface DAO.ReminderDAO {
+    }
+  }
+  
+
+  namespace DAO {
+    class DAO.ReminderDAO_Impl {
+    }
+  }
+  
+
+  namespace DAO {
+    interface DAO.SubjectDAO {
+    }
+  }
+  
+
+  namespace DAO {
+    class DAO.SubjectDAO_Impl {
+    }
+  }
+  
+
+  namespace DAO {
+    interface DAO.TeacherDAO {
+    }
+  }
+  
+
+  namespace DAO {
+    class DAO.TeacherDAO_Impl {
+    }
+  }
+  
+
+  namespace DAO {
+    interface DAO.UserDAO {
+    }
+  }
+  
+
+  namespace DAO {
+    class DAO.UserDAO_Impl {
+    }
+  }
+  
+
+  namespace Database {
+    abstract class Database.VADatabase {
+    }
+  }
+  
+
+  namespace Database {
+    class Database.VADatabase_Impl {
+    }
+  }
+  
+
+  namespace Entity {
+    class Entity.Assignment {
+    }
+  }
+  
+
+  namespace Entity {
+    class Entity.Reminder {
+    }
+  }
+  
+
+  namespace Entity {
+    class Entity.Subject {
+    }
+  }
+  
+
+  namespace Entity {
+    class Entity.Teacher {
+    }
+  }
+  
+
+  namespace Entity {
+    class Entity.User {
+    }
+  }
+  
+
+  namespace Utility {
+    class Utility.CardViewAdapter {
+    }
+  }
+  
+
+  namespace Utility {
+    class Utility.CardViewItem {
+    }
+  }
+  
+
+  namespace com.example.virtualassistant {
+    class com.example.virtualassistant.AddAssignmentFragment {
+    }
+  }
+  
+
+  namespace com.example.virtualassistant {
+    class com.example.virtualassistant.AddSubjectFragment {
+    }
+  }
+  
+
+  namespace com.example.virtualassistant {
+    class com.example.virtualassistant.AddTeacherFragment {
+    }
+  }
+  
+
+  namespace com.example.virtualassistant {
+    class com.example.virtualassistant.AssignmentFragment {
+    }
+  }
+  
+
+  namespace com.example.virtualassistant {
+    class com.example.virtualassistant.AssignmentsFragment {
+    }
+  }
+  
+
+  namespace com.example.virtualassistant {
+    class com.example.virtualassistant.BuildConfig {
+    }
+  }
+  
+
+  namespace com.example.virtualassistant {
+    class com.example.virtualassistant.Dashboard {
+    }
+  }
+  
+
+  namespace com.example.virtualassistant {
+    class com.example.virtualassistant.EditAssignmentFragment {
+    }
+  }
+  
+
+  namespace com.example.virtualassistant {
+    class com.example.virtualassistant.EditSubjectFragment {
+    }
+  }
+  
+
+  namespace com.example.virtualassistant {
+    class com.example.virtualassistant.EditTeacherFragment {
+    }
+  }
+  
+
+  namespace com.example.virtualassistant {
+    class com.example.virtualassistant.HomeFragment {
+    }
+  }
+  
+
+  namespace com.example.virtualassistant {
+    class com.example.virtualassistant.Login {
+    }
+  }
+  
+
+  namespace com.example.virtualassistant {
+    class com.example.virtualassistant.MainActivity {
+    }
+  }
+  
+
+  namespace com.example.virtualassistant {
+    class com.example.virtualassistant.NotificationBroadcast {
+    }
+  }
+  
+
+  namespace com.example.virtualassistant {
+    class com.example.virtualassistant.Register {
+    }
+  }
+  
+
+  namespace com.example.virtualassistant {
+    class com.example.virtualassistant.SearchFragment {
+    }
+  }
+  
+
+  namespace com.example.virtualassistant {
+    class com.example.virtualassistant.SubjectFragment {
+    }
+  }
+  
+
+  namespace com.example.virtualassistant {
+    class com.example.virtualassistant.TeacherFragment {
+    }
+  }
+  
+
+  namespace com.example.virtualassistant {
+    class com.example.virtualassistant.TeachersFragment {
+    }
+  }
+  
+
+  DAO.AssignmentDAO_Impl .up.|> DAO.AssignmentDAO
+  DAO.ReminderDAO_Impl .up.|> DAO.ReminderDAO
+  DAO.SubjectDAO_Impl .up.|> DAO.SubjectDAO
+  DAO.TeacherDAO_Impl .up.|> DAO.TeacherDAO
+  DAO.UserDAO_Impl .up.|> DAO.UserDAO
+  Database.VADatabase -up-|> androidx.room.RoomDatabase
+  Database.VADatabase_Impl -up-|> Database.VADatabase
+  Database.VADatabase_Impl o-- DAO.AssignmentDAO : _assignmentDAO
+  Database.VADatabase_Impl o-- DAO.ReminderDAO : _reminderDAO
+  Database.VADatabase_Impl o-- DAO.SubjectDAO : _subjectDAO
+  Database.VADatabase_Impl o-- DAO.TeacherDAO : _teacherDAO
+  Database.VADatabase_Impl o-- DAO.UserDAO : _userDAO
+  Entity.Assignment .up.|> java.io.Serializable
+  Entity.Reminder .up.|> java.io.Serializable
+  Entity.Subject .up.|> java.io.Serializable
+  Entity.Teacher .up.|> java.io.Serializable
+  Entity.User .up.|> java.io.Serializable
+  Utility.CardViewAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  Utility.CardViewAdapter o-- Utility.CardViewAdapter.OnitemClickListener : mListener
+  com.example.virtualassistant.AddAssignmentFragment -up-|> androidx.fragment.app.Fragment
+  com.example.virtualassistant.AddAssignmentFragment o-- Database.VADatabase : database
+  com.example.virtualassistant.AddAssignmentFragment o-- DAO.AssignmentDAO : dbAssignment
+  com.example.virtualassistant.AddAssignmentFragment o-- DAO.SubjectDAO : dbSubject
+  com.example.virtualassistant.AddSubjectFragment -up-|> androidx.fragment.app.Fragment
+  com.example.virtualassistant.AddSubjectFragment o-- Database.VADatabase : database
+  com.example.virtualassistant.AddSubjectFragment o-- DAO.SubjectDAO : dbSubject
+  com.example.virtualassistant.AddSubjectFragment o-- DAO.TeacherDAO : dbTeacher
+  com.example.virtualassistant.AddTeacherFragment -up-|> androidx.fragment.app.Fragment
+  com.example.virtualassistant.AddTeacherFragment o-- Database.VADatabase : database
+  com.example.virtualassistant.AddTeacherFragment o-- DAO.TeacherDAO : dbTeacher
+  com.example.virtualassistant.AssignmentFragment -up-|> androidx.fragment.app.Fragment
+  com.example.virtualassistant.AssignmentFragment o-- Database.VADatabase : database
+  com.example.virtualassistant.AssignmentFragment o-- DAO.AssignmentDAO : dbAssignment
+  com.example.virtualassistant.AssignmentFragment o-- DAO.SubjectDAO : dbSubject
+  com.example.virtualassistant.AssignmentsFragment -up-|> androidx.fragment.app.Fragment
+  com.example.virtualassistant.AssignmentsFragment o-- Database.VADatabase : database
+  com.example.virtualassistant.AssignmentsFragment o-- DAO.AssignmentDAO : dbAssignment
+  com.example.virtualassistant.AssignmentsFragment o-- DAO.ReminderDAO : dbReminder
+  com.example.virtualassistant.AssignmentsFragment o-- DAO.SubjectDAO : dbSubject
+  com.example.virtualassistant.Dashboard -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.virtualassistant.EditAssignmentFragment -up-|> androidx.fragment.app.Fragment
+  com.example.virtualassistant.EditAssignmentFragment o-- Database.VADatabase : database
+  com.example.virtualassistant.EditAssignmentFragment o-- DAO.AssignmentDAO : dbAssignment
+  com.example.virtualassistant.EditAssignmentFragment o-- DAO.ReminderDAO : dbReminder
+  com.example.virtualassistant.EditAssignmentFragment o-- DAO.SubjectDAO : dbSubject
+  com.example.virtualassistant.EditSubjectFragment -up-|> androidx.fragment.app.Fragment
+  com.example.virtualassistant.EditSubjectFragment o-- Database.VADatabase : database
+  com.example.virtualassistant.EditSubjectFragment o-- DAO.SubjectDAO : dbSubject
+  com.example.virtualassistant.EditSubjectFragment o-- DAO.TeacherDAO : dbTeacher
+  com.example.virtualassistant.EditTeacherFragment -up-|> androidx.fragment.app.Fragment
+  com.example.virtualassistant.EditTeacherFragment o-- Database.VADatabase : database
+  com.example.virtualassistant.EditTeacherFragment o-- DAO.TeacherDAO : dbTeacher
+  com.example.virtualassistant.HomeFragment -up-|> androidx.fragment.app.Fragment
+  com.example.virtualassistant.HomeFragment o-- Database.VADatabase : database
+  com.example.virtualassistant.HomeFragment o-- DAO.AssignmentDAO : dbAssignment
+  com.example.virtualassistant.HomeFragment o-- DAO.ReminderDAO : dbReminder
+  com.example.virtualassistant.HomeFragment o-- DAO.SubjectDAO : dbSubject
+  com.example.virtualassistant.Login -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.virtualassistant.Login o-- Database.VADatabase : database
+  com.example.virtualassistant.Login o-- DAO.UserDAO : db
+  com.example.virtualassistant.MainActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.virtualassistant.NotificationBroadcast -up-|> android.content.BroadcastReceiver
+  com.example.virtualassistant.Register -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.virtualassistant.Register o-- Database.VADatabase : database
+  com.example.virtualassistant.Register o-- DAO.UserDAO : db
+  com.example.virtualassistant.SearchFragment -up-|> androidx.fragment.app.Fragment
+  com.example.virtualassistant.SearchFragment o-- Database.VADatabase : database
+  com.example.virtualassistant.SearchFragment o-- DAO.AssignmentDAO : dbAssignment
+  com.example.virtualassistant.SearchFragment o-- DAO.SubjectDAO : dbSubject
+  com.example.virtualassistant.SearchFragment o-- DAO.TeacherDAO : dbTeacher
+  com.example.virtualassistant.SearchFragment o-- Utility.CardViewAdapter : mAdapter
+  com.example.virtualassistant.SubjectFragment -up-|> androidx.fragment.app.Fragment
+  com.example.virtualassistant.SubjectFragment o-- Database.VADatabase : database
+  com.example.virtualassistant.SubjectFragment o-- DAO.AssignmentDAO : dbAssignment
+  com.example.virtualassistant.SubjectFragment o-- DAO.SubjectDAO : dbSubject
+  com.example.virtualassistant.SubjectFragment o-- DAO.TeacherDAO : dbTeacher
+  com.example.virtualassistant.TeacherFragment -up-|> androidx.fragment.app.Fragment
+  com.example.virtualassistant.TeacherFragment o-- Database.VADatabase : database
+  com.example.virtualassistant.TeacherFragment o-- DAO.SubjectDAO : dbSubject
+  com.example.virtualassistant.TeacherFragment o-- DAO.TeacherDAO : dbTeacher
+  com.example.virtualassistant.TeachersFragment -up-|> androidx.fragment.app.Fragment
+  com.example.virtualassistant.TeachersFragment o-- Database.VADatabase : database
+  com.example.virtualassistant.TeachersFragment o-- DAO.SubjectDAO : dbSubject
+  com.example.virtualassistant.TeachersFragment o-- DAO.TeacherDAO : dbTeacher
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
