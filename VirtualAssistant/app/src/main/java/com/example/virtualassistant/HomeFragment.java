@@ -266,11 +266,13 @@ public class HomeFragment extends Fragment {
 
         smallAssignmentListView.setOnItemClickListener((parent, view, position, id) -> {
             String pos = assignmentArrayList.get(position);
+            int aID = dbAsgmtInc.getAsgmtInc(temp,pos).getAsgmtID();
             Toast.makeText(getContext(), pos + " clicked.", Toast.LENGTH_SHORT).show();
             Fragment fragment = new AssignmentFragment();
             Bundle bundle = new Bundle();
             bundle.putInt("USER_ID", temp);
-            bundle.putInt("ASSIGNMENT_ID", dbAsgmtInc.getAsgmtInc(temp,pos).getAsgmtID());
+            bundle.putInt("ASSIGNMENT_ID", aID);
+            bundle.putString("ASSIGNMENT_NAME", dbAsgmtInc.getAsgmtIncName(temp, aID));
             fragment.setArguments(bundle);
             assert getFragmentManager() != null;
             getFragmentManager().beginTransaction().replace(R.id.fragment_container,
