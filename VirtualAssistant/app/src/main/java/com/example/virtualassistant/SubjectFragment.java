@@ -91,7 +91,7 @@ public class SubjectFragment extends Fragment {
         textViewTeacherNameDesc = getView().findViewById(R.id.textViewTeacherNameDesc);
         textViewIncAssDesc = getView().findViewById(R.id.textViewIncAssDesc);
         buttonDoneSubject = getView().findViewById(R.id.buttonDoneSubject);
-        subjectAssignmentsList = dbAsgmtInc.getAllAsgmtInc(temp);
+        subjectAssignmentsList = dbAsgmtInc.getAsgmtIncWithSubject(temp, subjectID);
 
         subjectNameTextView.setText(dbSubject.getSubjectName(temp, subjectID));
         subjectStartTime.setText(dbSubject.getSubjectTime(temp, subjectID));
