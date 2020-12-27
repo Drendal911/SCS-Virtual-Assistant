@@ -5,7 +5,7 @@ User Guide
 
 Introduction
 
-Welcome to Shelby County Schools Virtual Assistant. SCS Virtual Assistant was created to help users keep track of classes, teachers, assignments, and deadlines. This guide provides instruction on how to install, sign up, log into, and use all of the application’s features.
+SCS Virtual Assistant is an android mobile application created to help users keep track of classes, teachers, assignments, and deadlines. This guide provides instruction on how to install, sign up, log into, and use all of the application’s features.
 
 Installation and Using the Application
 
