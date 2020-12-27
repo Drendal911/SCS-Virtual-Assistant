@@ -12,7 +12,7 @@ Installation and Using the Application
 Before we begin, it’s important to note the SCS Virtual Assistant app has a minimum SDK of 29 (Android 10). It will not function on devices with older operating systems.
 1.	To install the application, connect an android phone to your computer using a USB cable. 
 2.	Ensure the USB connection setting on your phone is set to “Transferring files”.
-3.  Locate the virtual assistant apk file. It is located here:   Drendal911\SCS-Virtual-Assistant\VirtualAssistant\app\release\scs_virtual_assistant.apk
+3.  Locate the virtual assistant apk file. It is located here:   VirtualAssistant\app\release\scs_virtual_assistant.apk
 4.	Copy the apk file from your computer to your phone.
 5.	Find and tap the apk file on your phone.
 6.	When prompted, press “Install” then “Done” (The application should now be successfully installed on your phone and ready to use).
