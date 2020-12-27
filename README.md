@@ -68,4 +68,4 @@ Search Feature
 3.	As you type in the search field, matching entries will begin to populate the search list (Each entry represents one row and multiple columns from the database).
 
 Additional Feature
-SCS Virtual Assistant shows a list of assignments (outlined in red in the image below) which are due today. You can click on any item in the list to bring up more details.
+SCS Virtual Assistant shows a list of assignments (outlined in red in the image below) which are due today. You may click on any item in the list to bring up more details.
