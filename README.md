@@ -5,7 +5,7 @@ User Guide
 
 Introduction
 
-SCS Virtual Assistant is an android mobile application created to help users keep track of classes, teachers, assignments, and deadlines. This guide provides instruction on how to install, sign up, log into, and use all of the application’s features.
+SCS Virtual Assistant is an android mobile application created to help users keep track of classes, teachers, assignments, and deadlines. Data from the app is stored using SQLite. This guide provides instruction on how to install, sign up, log into, and use all of the application’s features.
 
 Installation and Using the Application
 
